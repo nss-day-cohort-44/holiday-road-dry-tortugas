@@ -4,10 +4,11 @@ import { getAttractions } from "./attractions/AttractionProvider.js"
 import { attractionSelect } from "./attractions/AttractionSelect.js"
 import { getEateries } from "./eateries/EateryProvider.js"
 import { eaterySelect } from "./eateries/EaterySelect.js"
+import { eateries } from "./eateries/EateryList.js"
 
 parkSelect()
 getParks()
 getAttractions()
 attractionSelect()
 eaterySelect()
-getEateries()
+eateries()

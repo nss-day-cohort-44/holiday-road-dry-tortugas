@@ -3,17 +3,18 @@
 
 let nationalEateries = [] 
 
-export const useNationalEateries = () => {
+export const useEateries = () => {
     return nationalEateries.slice()
 }
 
 
 export const getEateries = () => {
-        return fetch(`http://holidayroad.nss.team/eateries`)
+        return fetch("http://holidayroad.nss.team/eateries")
         .then(response => response.json())
         .then(
             parsedEateries => {
                 nationalEateries = parsedEateries
                 console.log(parsedEateries)
-            })
+            }
+        )
 }
