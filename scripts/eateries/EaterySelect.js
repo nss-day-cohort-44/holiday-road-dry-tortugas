@@ -1,39 +1,41 @@
 // Import provider functions, render dropdown
 
-import { getEateries, useNationalEateries } from "./EateryProvider.js"
+import { getEateries, useEateries } from "./EateryProvider.js"
 
-const eateriesSelector = document.querySelector(".eateryDropdown")
+const eaterySelector = document.querySelector(".eateryDropdown")
 const eventHub = document.querySelector(".container")
 
+
+
+//This keeps iterated instead of the list part
+const render = eatery => {
+
+    eaterySelector.innerHTML = `
+        <option value="0">Please select an eatery...</option>
+        ${eatery.map (
+            eateryObj => {
+                return `<option value="${eateryObj.businessName}">${eateryObj.businessName}</option>`
+                } 
+        ).join("")
+        }
+    `
+}
 
 export const eaterySelect = () => {
     getEateries()
     .then(() => {
-        const eateryArray = useNationalEateries()
-
+        const eateryArray = useEateries()
         render(eateryArray)
     })
 }
 
-const render = eatery => {
-    eateriesSelector.innerHTML = `
-        <option value="0">Please select an eatery...</option>
-        ${ eatery.map (
-            eateryObj => {
-                return `<option value="${eateryObj.businessName}">${eateryObj.businessName}</option>`
-            } 
-    ).join("")
-        }
-        
-    `
-}
     //debugger
 eventHub.addEventListener("change", (changeEvent)=>{
-    if (changeEvent.target.id === "eaterySelect") {
 
+    if (changeEvent.target.id === "eaterySelect") {
         const eaterySelectedEvent = new CustomEvent("eaterySelected", {
             detail: {
-                eateryName: parseInt(changeEvent.target.value)
+                eateryName: changeEvent.target.value
             }
         })
     eventHub.dispatchEvent(eaterySelectedEvent)
