@@ -24,4 +24,8 @@ export const ParkInfo = (parkInformation) => {
     })
 }
 
-
+const render = (park) => {
+    let buildParkHTML = ""
+        buildParkHTML += parkHTML(park)
+        parkContainer.innerHTML = buildParkHTML
+}
