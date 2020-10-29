@@ -3,12 +3,12 @@
 export const Eatery = (eateryObj) => {
     console.log(eateryObj)
     return `
-    <div id="eatery-${eateryObj.businessNam}" class="eatery__card">
-    <h2>Eatery</h2>
-        <dd>${eateryObj.businessName}</dd>
+    <div id="eatery-${eateryObj.businessName}" class="eatery__card">
+    <h3>${eateryObj.businessName}</h3>
         <button id="eatery--${eateryObj.id}">Details</button>
-        <dd>${eateryObj.state}</dd>
-        <dd>${eateryObj.city}</dd>
+        <dd>City: ${eateryObj.city}</dd>
+        <dd>State: ${eateryObj.state}</dd>
+        <dd>Description: ${eateryObj.description}</dd>
     </div>
     `
 }

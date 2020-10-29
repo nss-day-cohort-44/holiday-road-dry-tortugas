@@ -3,7 +3,7 @@ import {parkSelect} from "./parks/ParkSelect.js"
 import { getAttractions } from "./attractions/AttractionProvider.js"
 import { attractionSelect } from "./attractions/AttractionSelect.js"
 import { eaterySelect } from "./eateries/EaterySelect.js"
-import { eateries } from "./eateries/EateryList.js"
+import { eateries } from "./eateries/SingleEateryRender.js"
 import "./attractions/SingleAttractionRender.js"
 
 

@@ -3,7 +3,7 @@ import { getEateries, useEateries } from "./EateryProvider.js"
 
 
 const eventHub = document.querySelector(".container")
-const eateryElement = document.querySelector(".cardContainer")
+const eateryElement = document.querySelector(".eateryCard")
 
 export const eateries = () => {
     getEateries().then(() => {
@@ -28,9 +28,7 @@ eventHub.addEventListener("eaterySelected", eaterySelectedObject => {
         {
             eateryHTML = Eatery(filteredEateryArray)
             eateryElement.innerHTML = `
-            <div class="selectedEatery">
             ${eateryHTML}   
-            </div>
             `
         }   
 })
