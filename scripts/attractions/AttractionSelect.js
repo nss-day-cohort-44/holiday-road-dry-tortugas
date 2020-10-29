@@ -29,7 +29,7 @@ eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "bizarreSelect") {
         const attractionSelectedEvent = new CustomEvent("attractionSelected", {
             detail: {
-                attractionName: changeEvent.target.value
+                attractionThatWasChosen: changeEvent.target.value
             }
         })
         eventHub.dispatchEvent(attractionSelectedEvent)
