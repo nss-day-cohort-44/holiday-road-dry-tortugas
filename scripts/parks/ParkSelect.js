@@ -34,7 +34,7 @@ eventHub.addEventListener("change", (changeEvent)=>{
 
         const parkSelectedEvent = new CustomEvent("parkSelected", {
             detail: {
-                parkName: parseInt(changeEvent.target.value)
+                parkName: changeEvent.target.value
             }
         })
     eventHub.dispatchEvent(parkSelectedEvent)
