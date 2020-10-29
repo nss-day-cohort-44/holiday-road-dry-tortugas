@@ -9,7 +9,7 @@ export const useNationalParks = () => {
 
 
 export const getParks = () => {
-        return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`)
+        return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}&limit=500`)
         .then(response => response.json())
         .then(
             parsedParks => {
