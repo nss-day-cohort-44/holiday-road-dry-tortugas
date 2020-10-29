@@ -6,7 +6,8 @@ const parkContainer = document.querySelector(".parkCard")
 
 eventHub.addEventListener("parkSelected", event => {
     const park = event.detail.parkName
-    Park(park)
+    ParkInfo(park)
+    console.log(park)
 }) 
 
 export const ParkInfo = (parkInformation) => {
@@ -14,18 +15,19 @@ export const ParkInfo = (parkInformation) => {
     .then(() => {
         const parkArray = useNationalParks()
         const filteredParkObject = parkArray.find(
-            (parkObj => {
-                if(parkObj.fullName === park) {
+            (parksObj => {
+                if(parksObj.fullName === parkInformation) {
                     return true
                 }
             })
         )
     render(filteredParkObject)
+    console.log(filteredParkObject)
     })
 }
 
 const render = (park) => {
     let buildParkHTML = ""
-        buildParkHTML += parkHTML(park)
+        buildParkHTML += Park(park)
         parkContainer.innerHTML = buildParkHTML
 }
