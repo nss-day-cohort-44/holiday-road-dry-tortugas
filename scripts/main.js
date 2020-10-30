@@ -11,8 +11,7 @@ import "./eateries/EateryDetail.js"
 import { getWeather } from "./weather/WeatherProvider.js"
 import "./weather/WeatherSelect.js"
 import "./attractions/AttractionDetailRender.js"
-import "./buttons/buttonRenderClear.js"
-import { buttonHTML } from "./buttons/clearbuttonHTML.js"
+import "./saveButton/SaveButton.js"
 
 
 parkSelect()
@@ -22,4 +21,3 @@ getWeather()
 attractionSelect()
 eaterySelect()
 eateries()
-buttonHTML()
