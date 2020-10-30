@@ -1,4 +1,4 @@
-//const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector(".container")
 
 
 export const Park = (parkObj) => {
@@ -10,7 +10,7 @@ export const Park = (parkObj) => {
 }
 
 
-/*eventHub.addEventListener("click", (clickEvent) => {
+eventHub.addEventListener("click", (clickEvent) => {
     const [nameOfId, parkId] = clickEvent.target.id.split("--")
 
         if(clickEvent.target.id.startsWith("details-Button--")) {
@@ -24,4 +24,3 @@ export const Park = (parkObj) => {
         eventHub.dispatchEvent(detailsButtonClicked)
     }
 })
-*/
