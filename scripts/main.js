@@ -10,6 +10,8 @@ import "./attractions/SingleAttractionRender.js"
 import "./eateries/EateryDetail.js"
 import { getWeather } from "./weather/WeatherProvider.js"
 import "./weather/WeatherSelect.js"
+import "./attractions/AttractionDetailRender.js"
+
 
 parkSelect()
 getParks()

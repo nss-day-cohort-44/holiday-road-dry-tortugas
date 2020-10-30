@@ -5,7 +5,7 @@ const eventHub      = document.querySelector(".container")
 
 
 export const weatherInfo = () => {
-    debugger
+    
     getWeather()
         .then(() => {
             // init var to hold weather array held inside daily array
