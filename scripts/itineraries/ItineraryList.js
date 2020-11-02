@@ -9,7 +9,7 @@ const targetContainer = document.querySelector('.savedItineraryCard')
 const eventHub = document.querySelector('.container')
 
 // call ItineraryList() to bring app state up to date with API in response to event indicating API state change
-eventHub.addEventListener("ItineraryStateChanged", () => ItineraryList() )
+eventHub.addEventListener("itineraryStateChanged", () => ItineraryList() )
 
 // get intineraries and generate HTML for each intinerary object
 export const ItineraryList = () => {

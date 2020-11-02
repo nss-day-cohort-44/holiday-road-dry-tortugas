@@ -55,10 +55,11 @@ h2{
 	border: none;
 }
 
-.parkCard, .attractionCard, .eateryCard{
+.parkCard, .attractionCard, .eateryCard, .savedItinerary{
 	display: grid;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	text-align: center;
 	align-content: space-between;
 	border: 1px solid black;
     margin: 1rem;
@@ -82,7 +83,7 @@ h2{
 }
 
 .savedContainer{
-	flex: 1;
+	flex: 2;
 }
 
 p{

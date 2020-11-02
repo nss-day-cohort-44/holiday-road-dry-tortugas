@@ -1,3 +1,6 @@
+import { saveItinerary } from "../itineraries/ItineraryProvider.js"
+
+
 const eventHub = document.querySelector(".container")
 
 let itinerarySelected = 
@@ -16,8 +19,7 @@ eventHub.addEventListener("parkSelected", event => {
     if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
         document.getElementById("saveItinerary").disabled = false;
     }
-    
-        console.log(itinerarySelected)
+
 }
 )
 
@@ -25,7 +27,6 @@ eventHub.addEventListener("eaterySelected", event => {
     let eatery = event.detail.eateryName
     itinerarySelected.eatery = eatery
 
-    console.log(itinerarySelected)
     if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
         document.getElementById("saveItinerary").disabled = false;
     }
@@ -37,12 +38,20 @@ eventHub.addEventListener("attractionSelected", event => {
     let attraction = event.detail.attractionThatWasChosen
     itinerarySelected.bizzerarreie = attraction 
 
-    console.log(itinerarySelected)
     if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
         document.getElementById("saveItinerary").disabled = false;
     }
 }
 )
+
+
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id === "saveItinerary") 
+
+            saveItinerary(itinerarySelected)
+            console.log(clickEvent.target.id)
+
+})
 
 
 
