@@ -12,6 +12,7 @@ import { getWeather } from "./weather/WeatherProvider.js"
 import "./weather/WeatherSelect.js"
 import "./attractions/AttractionDetailRender.js"
 import "./saveButton/SaveButton.js"
+import { ItineraryList } from "./itineraries/ItineraryList.js"
 
 
 parkSelect()
@@ -21,3 +22,4 @@ getWeather()
 attractionSelect()
 eaterySelect()
 eateries()
+ItineraryList()
