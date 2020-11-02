@@ -13,23 +13,34 @@ eventHub.addEventListener("parkSelected", event => {
         let park = event.detail.parkName
         itinerarySelected.park = park
     
-    
+    if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
+        document.getElementById("saveItinerary").disabled = false;
+    }
     
         console.log(itinerarySelected)
 }
 )
 
-eventHub.addEventListener("eaterySelected", eaterySelectedObject => {
-    const eatery = eaterySelectedObject.detail.eateryName
-    if(eaterySelectedObject.detail.value !==0) {
-        itinerarySelected.eatery = eatery
+eventHub.addEventListener("eaterySelected", event => {
+    let eatery = event.detail.eateryName
+    itinerarySelected.eatery = eatery
+
+    console.log(itinerarySelected)
+    if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
+        document.getElementById("saveItinerary").disabled = false;
     }
     
 }
 )
 eventHub.addEventListener("attractionSelected", event => {
     
-    const attraction = event.detail.attractionThatWasChosen
+    let attraction = event.detail.attractionThatWasChosen
+    itinerarySelected.bizzerarreie = attraction 
+
+    console.log(itinerarySelected)
+    if (itinerarySelected.park !== "" && itinerarySelected.eatery !== "" && itinerarySelected.bizzerarreie !== "") {
+        document.getElementById("saveItinerary").disabled = false;
+    }
 }
 )
 
