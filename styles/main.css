@@ -11,9 +11,100 @@ textarea {
 	font-family: "Comfortaa", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
+	width: 300px;
+	display: inline;
+	border-radius: 25px;
+}
+
+img{
+	border-radius: 25px;
+	animation: fadeIn ease 20s;
+	animation: fadeInAnimation ease 5s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+}
+
+body{
+	background-color:;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
+}
+
+h2{
+	margin: 10px;
+}
+
+.cardContainer{
+	display: flex;
+}
+
+.parkDropdown, .attractionDropdown, .eateryDropdown{
+	margin-bottom: 30px;
+	border: none;
+}
+
+.parkCard, .attractionCard, .eateryCard{
+	display: grid;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-between;
+	border: 1px solid black;
+    margin: 1rem;
+    padding: 0.5rem;
+	flex-basis: 25%;
+	border-radius: 25px;
+	background-color: #ffffff;
+}
+
+.itineraryContainer{
+	display: flex;
+}
+
+
+.previewContainer{
+	flex: 3;
+	background-color: #7b8a74;
+	border: 1px solid black;
+	border-radius: 25px;
+	margin-left: 15px;
+}
+
+.savedContainer{
+	flex: 1;
+}
+
+p{
+	display: block;
+}
+
+.weatherContainer{
+	position: relative;
+	bottom: 0;
+	margin: 15px;
+}
+
+#saveItinerary{
+	border-radius: 25px;
+	margin: 15px;
+}
+
+.savedContainer{
+	border: 1px solid black;
+	border-radius: 25px;
+	margin: 1rem;
+    padding: 0.5rem;
+    flex-basis: 25%;
+	background-color: #7b8a74;
 }
