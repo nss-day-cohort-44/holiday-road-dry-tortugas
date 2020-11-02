@@ -45,5 +45,23 @@ eventHub.addEventListener("attractionSelected", event => {
 )
 
 
-// if(itinerarySelected.park !== "" && itinerarySelected.eatery !=="" && itinerarySelected.bizzerarreie !== "") {
-    // button is enabled
+
+// SaveButton.js
+  // create event listener for saveItinerary id w/ event dispatch
+  // invoke a function to save data to json-server
+  // call get/use itinerary function in response to itinerarySelected
+
+//   accounted for
+
+// new module: ItineraryProvider.js
+ // fetch saved itinerary from json-server
+ // Get & Use & Post   
+ // dispatch event
+
+//  ItineraryList.js
+  // calls getItinerary and useItinerary and call render
+  // eventHub and eventlistener looking for saveItinerary click event w/ function of itineraryList()
+  // itineraryList() on click - call render 
+
+//  ItineraryHTML.js
+  // ItineraryHTML(Iobj) to render to page
