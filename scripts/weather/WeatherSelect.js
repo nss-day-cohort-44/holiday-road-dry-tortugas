@@ -19,6 +19,8 @@ export const weatherInfo = () => {
             
                 // add for loop to grab first 5 days - check dt property in data array for order?
                 weatherInnerArray.push(element.weather[0])
+                // truncate array down to five elements
+                weatherInnerArray.splice(5)
             })
             // iterate weather array and call render on each loop passing element as argument to render
             weatherInnerArray.forEach(elementObj => {
@@ -40,8 +42,9 @@ const render = elementObj => {
 //  event listener below.
 eventHub.addEventListener("parkSelected", event => {
     const park = event.detail.parkName
-    
+// move getweather() and render() into this listener
+// .find === 
     // invoke weather info - currently no params but we need to pass lat-long so weather is specific to the selected park
-    weatherInfo()
+    // weatherInfo()
     
 }) 
