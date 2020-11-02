@@ -20,8 +20,8 @@ const eventHub = document.querySelector(".container")
 
         contentTarget.innerHTML += `
         <img src=${parkObj.images[0].url} width="200px" height="200px">
-        <p>CITY:${parkObj.addresses[0].city}</p>
-        <p>STATE:${parkObj.addresses[0].stateCode}</p>
-        <p>DESCRIPTION:${parkObj.description}</p>
+        <p><b>CITY:</b>${parkObj.addresses[0].city}</p>
+        <p><b>STATE:</b>${parkObj.addresses[0].stateCode}</p>
+        <p><b>DESCRIPTION:</b>${parkObj.description}</p>
         `
     }

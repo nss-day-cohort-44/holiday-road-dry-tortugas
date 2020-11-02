@@ -5,7 +5,8 @@ export const Eatery = (eateryObj) => {
     console.log(eateryObj)
     return `
     <div id="eatery-${eateryObj.id}" class="eatery__card">
-    <h3>${eateryObj.businessName}<button id="eatery--${eateryObj.id}">Details</button></h3>
+    <h3>${eateryObj.businessName}</h3>
+    <button id="eatery--${eateryObj.id}">Details</button>
     </div>
     `
 }
