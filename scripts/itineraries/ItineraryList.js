@@ -6,15 +6,14 @@ import { ItineraryHTML }              from './ItineraryHTML.js'
 const targetContainer = document.querySelector('.savedItineraryCard')
 
 // hang eventHub on top level element in index.html
-const eventHub = document.querySelector('container')
+const eventHub = document.querySelector('.container')
 
-// eventlistener for API state change event - save itinerary button clicked
 // call ItineraryList() to bring app state up to date with API in response to event indicating API state change
 eventHub.addEventListener("ItineraryStateChanged", () => ItineraryList() )
 
 // get intineraries and generate HTML for each intinerary object
 export const ItineraryList = () => {
-    getItinerary.then( () => {
+    getItinerary().then( () => {
         const itineraryArray = useItinerary()
 
         render(itineraryArray)
