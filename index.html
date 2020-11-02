@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dry Tortugas Travel Itinerary</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     
@@ -11,50 +12,52 @@
 
 <header>
 
-    <img src="./images/Dry Tortugas.JPG" alt="">
+<img src="./images/Dry Tortugas Resized.jpg" alt="">
 
     <select class="parkDropdown" id="parkSelect">
-        <!-- <option value="0">Please select a park...</option> -->
+        <option value="0">Please select a park...</option>
     </select>
 
-        <select class="attractionDropdown" id="bizarreSelect">
+    <select class="attractionDropdown" id="bizarreSelect">
         <option value="0">Please select an attraction...</option>
     </select>
 
-        <select class="eateryDropdown" id="eaterySelect">
-        <!-- <option value="0">Please select an eatery...</option> -->
+    <select class="eateryDropdown" id="eaterySelect">
+        <option value="0">Please select an eatery...</option>
     </select>
 </header>
 <!-- itineraryContainer holds both preview container and saved container -->
-<div class="itineraryContainer">
+<article class="itineraryContainer">
+
     <article class="previewContainer">
         
-        <section class="cardContainer">
-            <section class="parkCard">
+            <section class="cardContainer">
+                <article class="parkCard">
+                    
+                </article>
                 
-            </section>
-            
-            
-            <section class ="attractionCard" id ="attractionSelect">
+                
+                <article class ="attractionCard" id ="attractionSelect">
+
+                </article>
+                
+                <article class ="eateryCard" id ="restaurantSelect">
+                    
+                </article>
 
             </section>
-            
-            <section class ="eateryCard" id ="restaurantSelect">
-                
-            </section>
-
-        </section>
     
-        <section class="weatherContainer">
+    <div class="weatherContainer">
+
+    </div>
 
 
+    <button id="saveItinerary">Save Itinerary</button>
         </section>
-
-        
-
         
         
         <button id="saveItinerary" disabled="disabled">Save Itinerary</button>
+
 
     </article>
 
@@ -70,7 +73,7 @@
         </section>
 
     </aside>
-</div>
+</article>
 
 
 
@@ -82,10 +85,8 @@
 
 
 <footer>
-<h2>Travis</h2>
-<h2>David</h2>
-<h2>Kyle</h2>
-<h2>Ted</h2>
+<h2>Travis David Kyle Ted</h2>
+<h2>2020 NSS Cohort 44</h2>
 </footer>
 </main>
 
