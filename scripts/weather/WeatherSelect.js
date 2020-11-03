@@ -14,7 +14,7 @@ const render = (weatherArray) => {
     // .map return new array to pull out .description
     // for loop new array hTMLRep = "" then send to DOM
     contentTarget.innerHTML =`
-        <h3>5-Day Weather Forcast</h3>
+        <h3>5-Day Park Weather Forcast</h3>
         <div><b>Day 1: </b>${weatherDetail[0]}</div>
         <div><b>Day 2: </b>${weatherDetail[1]}</div>
         <div><b>Day 3: </b>${weatherDetail[2]}</div>

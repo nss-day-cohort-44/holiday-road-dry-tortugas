@@ -33,7 +33,7 @@ const render = (itineraryArray) => {
         // insert the full itineraryHTMLRep HTML into element held in the value of itineraryContainer
         targetContainer.innerHTML = `
           <h2>Saved Itineraries</h2>
-            <section class="itineraryList">
+            <section class="savedItineraryList">
               ${itineraryHTMLRep}
             </section>
           `

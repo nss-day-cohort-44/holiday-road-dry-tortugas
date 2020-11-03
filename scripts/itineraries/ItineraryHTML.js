@@ -2,9 +2,9 @@
 export const ItineraryHTML = (itineraryObj) => {
     return `
     <div class="savedItinerary">
-    <p class="savedItineraryCard__park">         National Park: ${itineraryObj.park}</p>
-    <p class="savedItineraryCard__eatery">       Eatery:        ${itineraryObj.eatery}</p>
-    <p class="savedItineraryCard__bizzerarreie"> Attraction:    ${itineraryObj.bizzerarreie}</p>
+    <p class="savedItineraryCard__park">         <b>National Park:</b> ${itineraryObj.park}</p>
+    <p class="savedItineraryCard__bizzerarreie"> <b>Attraction:</b>    ${itineraryObj.bizzerarreie}</p>
+    <p class="savedItineraryCard__eatery">       <b>Eatery:</b>        ${itineraryObj.eatery}</p>
     </div>
     `
 }

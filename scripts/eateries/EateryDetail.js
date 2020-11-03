@@ -19,12 +19,10 @@ const render = (eateryObject) => {
 const detailTarget = document.querySelector(`#eatery-${eateryObject.id}`)
     
     detailTarget.innerHTML += `
-    <ul>
-        <dd><b>Wheelchair Accessible:</b> ${eateryObject.ameneties.wheelchairAccessible}</dd>
-        <dd><b>Wi-Fi:</b> ${eateryObject.ameneties.wifi}</dd>
-        <dd><b>City:</b> ${eateryObject.city}</dd>
-        <dd><b>State:</b> ${eateryObject.state}</dd>
-        <dd><b>Description:</b> ${eateryObject.description}</dd>
-    </ul>    
+        <p><b>City:</b> ${eateryObject.city}</p>
+        <p><b>State:</b> ${eateryObject.state}</p>
+        <p><b>Description:</b> ${eateryObject.description}</p>
+        <p><b>Wheelchair Accessible:</b> ${eateryObject.ameneties.wheelchairAccessible}</p>
+        <p><b>Wi-Fi:</b> ${eateryObject.ameneties.wifi}</p>
         `
 }

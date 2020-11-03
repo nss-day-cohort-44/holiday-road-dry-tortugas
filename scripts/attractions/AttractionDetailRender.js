@@ -22,10 +22,9 @@ const render = (attractionObj) => {
     const contentTarget = document.querySelector(`#attraction-${attractionObj.id}`)
 
     contentTarget.innerHTML += `
-        <ul>
-            <li>${attractionObj.city}</li>
-            <li>${attractionObj.state}</li>
-            <li>${attractionObj.description}</li>
-        </ul>
+            <p><b>City:</b>${attractionObj.city}</p>
+            <p><b>State:</b>${attractionObj.state}</p>
+            <p><b>Description:</b>${attractionObj.description}</p>
+            <p><b>Souvenirs:</b>${attractionObj.ameneties.souvenirs}</p>
     `
 }
