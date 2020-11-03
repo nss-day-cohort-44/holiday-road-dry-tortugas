@@ -1,7 +1,7 @@
 const eventHub = document.querySelector(".container")
 
 const dispatchChangeEvent = () => {
-    const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
+    const itineraryStateChangedEvent = new CustomEvent("ItineraryStateChanged")
     eventHub.dispatchEvent(itineraryStateChangedEvent)
 }
 
@@ -29,6 +29,5 @@ export const saveItinerary = (itineraries) => {
     .then(getItinerary)
     .then(dispatchChangeEvent)
 }
-
 
 
