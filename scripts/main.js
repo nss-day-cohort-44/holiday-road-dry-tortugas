@@ -18,7 +18,7 @@ import { ItineraryList } from "./itineraries/ItineraryList.js"
 parkSelect()
 getParks()
 getAttractions()
-getWeather()
+// getWeather()
 attractionSelect()
 eaterySelect()
 eateries()

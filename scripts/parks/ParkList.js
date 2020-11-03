@@ -1,5 +1,10 @@
 import {getParks, useNationalParks} from "./ParkProvider.js"
-import {Park} from "./ParkCard.js"
+import {Park}                       from "./ParkCard.js"
+// import { getWeather }               from "../weather/WeatherProvider.js" 
+
+// declare vlat & vlon
+// let vlat  = "lat="
+// let vlon  = "lon="
 
 const eventHub = document.querySelector(".container")
 const parkContainer = document.querySelector(".parkCard")
@@ -11,6 +16,7 @@ eventHub.addEventListener("parkSelected", event => {
 }) 
 
 export const ParkInfo = (parkInformation) => {
+    debugger
     getParks()
     .then(() => {
         const parkArray = useNationalParks()
@@ -22,7 +28,7 @@ export const ParkInfo = (parkInformation) => {
             })
         )
     render(filteredParkObject)
-    console.log(filteredParkObject)
+    // console.log(filteredParkObject)
     })
 }
 

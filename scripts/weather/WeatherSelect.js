@@ -1,47 +1,44 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
+import { getParks, useNationalParks }               from "../parks/ParkProvider.js"
 
 const contentTarget = document.querySelector(".weatherContainer")
 const eventHub      = document.querySelector(".container")
 
 
-export const weatherInfo = () => {
-    
-    getWeather()
-        .then(() => {
-            // init var to hold weather array held inside daily array
-            let weatherInnerArray = []
-
-            // currently parsedWeather.daily | we may need to change if we need the dt property
-            const weatherOuterArray = useWeather()
-            
-            // iterate data array and push weather array to weatherInnerArray
-            weatherOuterArray.forEach(element => {
-            
-                // add for loop to grab first 5 days - check dt property in data array for order?
-                weatherInnerArray.push(element.weather[0])
-            })
-            // iterate weather array and call render on each loop passing element as argument to render
-            weatherInnerArray.forEach(elementObj => {
-                // console.log(element)
-                render(elementObj)
-            })
-            // console.log(weatherInnerArray)
-        })
-}
-
 // render function
-// needs HTML fix-up, this is proof on page only
-const render = elementObj => {
+const render = (weatherArray) => {
+    const weatherDetail = []
+    weatherArray.map( element => {
+        weatherDetail.push(element.weather[0].description)
+    }) 
+    // .map return new array to pull out .description
+    // for loop new array hTMLRep = "" then send to DOM
     contentTarget.innerHTML += `
-        <div>${elementObj.description} </div>
+        <div>${} </div>
     `
 }
 
 //  event listener below.
 eventHub.addEventListener("parkSelected", event => {
-    const park = event.detail.parkName
-    
-    // invoke weather info - currently no params but we need to pass lat-long so weather is specific to the selected park
-    weatherInfo()
-    
+    const parkSelected = event.detail.parkName
+    getParks().then(park => {
+        const thisPark = useNationalParks().find(park => park.fullName === parkSelected)
+        getWeather(thisPark.latitude, thisPark.longitude)
+        .then(weather => {
+            weather = useWeather().slice(0,5)
+            render(weather)
+        })
+    })    
 }) 
+
+// eventHub.addEventListener('selectedPark', event => {
+//     const selectedPark = event.detail.selectedPark
+//     getParks().then(park => {
+//         const thisPark = useParks().find(park => park.fullName === selectedPark)
+//         getWeather(thisPark.latitude, thisPark.longitude)
+//         .then(weather => {
+//             weather = useWeather().slice(0,5)
+//             weatherDetail(weather)
+//         })
+//     })
+//     })

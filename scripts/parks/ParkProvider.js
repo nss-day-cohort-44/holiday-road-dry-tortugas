@@ -2,6 +2,8 @@
 import { keys } from "../Settings.js"
 
 let nationalParks = [] 
+// let vlat = ""
+// let vlon = ""
 
 export const useNationalParks = () => {
     return nationalParks.slice()
@@ -15,5 +17,7 @@ export const getParks = () => {
             parsedParks => {
                 nationalParks = parsedParks.data
                 console.log(parsedParks)
+
+
             })
 }
