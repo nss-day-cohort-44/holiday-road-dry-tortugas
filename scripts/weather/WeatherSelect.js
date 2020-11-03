@@ -1,7 +1,7 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
 import { getParks, useNationalParks }               from "../parks/ParkProvider.js"
 
-const contentTarget = document.querySelector(".weatherContainer")
+const contentTarget = document.querySelector(".weatherCard")
 const eventHub      = document.querySelector(".container")
 
 
@@ -13,8 +13,13 @@ const render = (weatherArray) => {
     }) 
     // .map return new array to pull out .description
     // for loop new array hTMLRep = "" then send to DOM
-    contentTarget.innerHTML += `
-        <div>${} </div>
+    contentTarget.innerHTML =`
+        <h3>5-Day Weather Forcast</h3>
+        <div><b>Day 1: </b>${weatherDetail[0]}</div>
+        <div><b>Day 2: </b>${weatherDetail[1]}</div>
+        <div><b>Day 3: </b>${weatherDetail[2]}</div>
+        <div><b>Day 4: </b>${weatherDetail[3]}</div>
+        <div><b>Day 5: </b>${weatherDetail[4]}</div>
     `
 }
 
