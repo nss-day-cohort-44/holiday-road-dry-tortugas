@@ -16,7 +16,7 @@ export const useWeather = () => {
 
 // fetch data and populate weatherArray
 export const getWeather = (vlat, vlon) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${vlat}&lon=${vlon}&exclude=current,minutely,hourly,alerts&appid=${keys.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${vlat}&lon=${vlon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${keys.weatherKey}`)
     .then(response => response.json())
     .then(
         parsedWeather => {
