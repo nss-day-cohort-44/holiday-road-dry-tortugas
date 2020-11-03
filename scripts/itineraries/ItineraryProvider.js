@@ -1,7 +1,7 @@
 const eventHub = document.querySelector(".container")
 
 const dispatchChangeEvent = () => {
-    const itineraryStateChangedEvent = new CustomEvent("ItineraryStateChanged")
+    const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
     eventHub.dispatchEvent(itineraryStateChangedEvent)
 }
 
