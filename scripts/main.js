@@ -8,7 +8,6 @@ import { eaterySelect } from "./eateries/EaterySelect.js"
 import { eateries } from "./eateries/SingleEateryRender.js"
 import "./attractions/SingleAttractionRender.js"
 import "./eateries/EateryDetail.js"
-import { getWeather } from "./weather/WeatherProvider.js"
 import "./weather/WeatherSelect.js"
 import "./attractions/AttractionDetailRender.js"
 import "./saveButton/SaveButton.js"
@@ -18,7 +17,6 @@ import { ItineraryList } from "./itineraries/ItineraryList.js"
 parkSelect()
 getParks()
 getAttractions()
-// getWeather()
 attractionSelect()
 eaterySelect()
 eateries()

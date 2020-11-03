@@ -16,7 +16,7 @@ eventHub.addEventListener("parkSelected", event => {
 }) 
 
 export const ParkInfo = (parkInformation) => {
-    debugger
+    // debugger
     getParks()
     .then(() => {
         const parkArray = useNationalParks()
